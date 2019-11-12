@@ -1,0 +1,53 @@
+[
+  "POST á /users/login",
+  {
+    "username":"admin",
+    "password":"adminadmin"
+  },
+  
+  "PATCH á /users/me",
+  {
+    "email": "nytt@email.is"
+  },
+
+  "POST á /categories",
+  {
+    "name": "flottur flokkur"
+  },
+
+  "PATCH á /categories/:id",
+  {
+    "name": "flottari flokkur"
+  },
+
+  "POST á /products",
+  {
+    "name": "flott vara",
+    "price": 999,
+    "description": "Þessi vara er rosa flott!",
+    "image": "img1.jpg",
+    "categoryid": 9
+  },
+
+  "PATCH á /products/:id",
+  {
+    "description": "ný flott vörulýsing",
+    "price": 123456789
+  },
+
+  "POST á /cart",
+  {
+    "productid": 999,
+    "quantity": 999
+  },
+
+  "PATCH á /cart/line/:id",
+  {
+    "quantity": 123
+  },
+
+  "POST á /images",
+  {
+    "images": ["img1.jpg", "img2.jpg"]
+  }
+]

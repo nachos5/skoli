@@ -1,0 +1,42 @@
+
+@import '../../config.scss';
+
+.products {
+
+  &--title {
+    font-family: $font-heading;
+    font-size: 1.5rem;
+    margin: $gutter/2 0 $gutter/2 0;
+  }
+  
+  &--grid {
+    display: grid;
+    //grid-gap: $gutter;
+    grid-template-columns: auto auto auto;
+
+    a, h2, p {
+      color: $color-font!important;
+    }
+
+    &__link {
+      display: block;
+    }
+    
+    &__item {
+      display: grid;
+      grid-gap: $gutter/4;
+    }
+    
+    &__info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    &__img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.texti {
+  white-space: pre-line;
+}
+
+.quote {
+  background-color: $ljosgrar;
+  &__texti {
+
+  }
+}
+
+code {
+  color: lighten(black, 25%);
+  font-weight: bold;
+  white-space: pre-line;
+}

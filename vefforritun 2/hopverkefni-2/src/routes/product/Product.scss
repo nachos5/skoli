@@ -1,0 +1,7 @@
+@import '../../config.scss';
+
+.productDetails {
+  &__blur {
+    filter: opacity(20%);
+  }
+}

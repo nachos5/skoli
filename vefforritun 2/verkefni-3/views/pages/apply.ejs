@@ -1,0 +1,69 @@
+<%- include('../partials/header', {title: 'Atvinnumsókn', path: locals.urls.apply}) %>
+
+<div class="container-fluid p-2">
+  <div class="col-8 m-auto">
+
+    <h1 class="col-12 pl-0 border-bottom">Atvinnuumsókn</h1>
+
+    <form action="<%= locals.urls.apply %>" method="post" id="form-apply" class="col-12 p-0 pt-4 d-flex flex-column">
+      <div class="field-container flex-column flex-md-row">
+        <label class="col-12 p-0 col-md-3" for="nafn">Nafn:</label>
+        <input class="<%= "col-12 p-0 col-md-9 " + invalid.nafn %>" type="text" name="nafn" value="<%= data.nafn %>">
+      </div>
+      <div class="field-container flex-column flex-md-row">
+        <label class="col-12 p-0 col-md-3" for="Netfang">Netfang:</label>
+        <input class="<%= "col-12 p-0 col-md-9 " + invalid.netfang %>" type="email" name="netfang" value="<%= data.netfang %>">
+      </div>
+      <div class="field-container flex-column flex-md-row">
+        <label class="col-12 p-0 col-md-3" for="simi">Sími:</label>
+        <input class="<%= "col-12 p-0 col-md-9 " + invalid.simi %>" type="tel" name="simi" value="<%= data.simi %>">
+      </div>
+      <div class="field-container flex-column flex-md-row">
+        <label class="col-12 p-0 col-md-3" for="texti">Kynning á þér:</label>
+        <textarea class="<%= "col-12 p-0 col-md-9 " + invalid.texti %>" name="texti"><%= data.texti %></textarea>
+      </div>
+
+      <h4 class="col-12 pl-0">Starf sem sótt er um:</h4>
+
+      <fieldset id="starf" class="<%= "d-flex flex-column " + invalid.starf %>">
+        <label>
+          <% if (data.starf == 'Forritari') { %>
+            <input type="radio" value="Forritari" name="starf" checked>
+          <% } else { %>
+            <input type="radio" value="Forritari" name="starf">
+          <% } %>
+          Forritari
+        </label>
+        <label>
+          <% if (data.starf == 'Hönnuður') { %>
+            <input type="radio" value="Hönnuður" name="starf" checked>
+          <% } else { %>
+            <input type="radio" value="Hönnuður" name="starf">
+          <% } %>
+          Hönnuður
+        </label>
+        <label>
+          <% if (data.starf == 'Verkefnastjóri') { %>
+            <input type="radio" value="Verkefnastjóri" name="starf" checked>
+          <% } else { %>
+            <input type="radio" value="Verkefnastjóri" name="starf">
+          <% } %>
+          Verkefnastjóri
+        </label>
+      </fieldset>
+      <input class="col-8 col-md-4 mt-4 btn btn-outline-primary" type="submit" value="Senda umsókn">
+    </form>
+
+    <% if (typeof errors != 'undefined') { %>
+      <h4 class="col-12 pl-0 mt-3">Villur:</h4>
+      <ul>
+        <% errors.forEach((err) => { %>
+          <li><%= err.msg %></li>
+        <% }); %>
+      </ul>
+    <% } %>
+
+  </div>
+</div>
+
+<% include ../partials/footer %>

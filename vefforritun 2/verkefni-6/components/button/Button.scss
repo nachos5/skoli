@@ -1,0 +1,21 @@
+.button {
+  font-size: 1rem;
+  border-radius: 0;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  background-color: #333;
+  transition: background-color ease-in 200ms;
+
+  &:hover {
+    background-color: #666;
+  }
+}
+
+.active {
+  background-color: rgba(green, 0.5);
+  color: black;
+  &:hover {
+    background-color: green;
+    color: #fff;
+  }
+}

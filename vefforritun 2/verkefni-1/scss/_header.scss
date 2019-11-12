@@ -1,0 +1,19 @@
+header {
+  height: 200px;
+  padding: 0;
+  //margin-bottom: 100px;
+}
+
+#bg-image {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: contrast(30%);
+}
+
+#fyrirsogn {
+  color: black;
+  height: 200px;
+  position: absolute;
+  top: 0;
+}

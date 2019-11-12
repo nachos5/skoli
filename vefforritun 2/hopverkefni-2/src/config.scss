@@ -1,0 +1,33 @@
+$max-width: 1400px;
+$min-width: 600px;
+$gutter: 30px;
+
+$font-main: 'Open Sans', helvetica, arial, sans-serif;
+$font-heading: 'Noto Serif', georgia, serif;
+$font-bold: 700;
+
+$color-font: #222;
+$color-background: #eee;
+$color-gray: #ccc;
+$color-invalid: #4e1d04;
+$color-teal: #39CCCC;
+$color-lime: #01FF70;
+
+$color-invalid-background: #fbb;
+$color-invalid-border: #855;
+
+$transition: 250ms ease-in-out;
+
+h1, h2, h3 {
+  font: $font-heading;
+}
+
+img {
+  max-width: 100%;
+}
+
+main {
+  max-width: $max-width;
+  margin: 0 auto;
+  overflow-x: hidden;
+}

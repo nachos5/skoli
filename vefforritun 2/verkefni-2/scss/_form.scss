@@ -1,0 +1,26 @@
+#form-apply {
+  label {
+    font-size: 1rem;
+    padding: 0;
+  }
+
+  input, textarea {
+    border-radius: 5px;
+  }
+
+  fieldset {
+    label {
+      margin: 15px;
+    }
+  }
+
+  // class fyrir invalid reiti
+  .true {
+    background-color: $invalid;
+  }
+
+  .field-container {
+    display: flex;
+    margin: 0.5rem 0;
+  }
+}

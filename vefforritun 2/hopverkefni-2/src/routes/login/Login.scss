@@ -1,0 +1,47 @@
+@import '../../config.scss';
+
+.login {
+  margin: $gutter*2 0 $gutter*2 0;
+
+  ul {
+    list-style-position: inside
+  }
+
+  &--link, &--link:link, &--link:active, &--link:visited, &--link:hover {
+    text-decoration: none;
+    color: $color-font;
+  }
+
+  &--form {
+    margin: $gutter 0 $gutter 0;
+
+    &__field {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1rem;
+
+      @media (min-width: 600px) {
+        flex-direction: row;
+      }
+    }
+
+    &__field label {
+      @media (min-width: 600px) {
+        flex: 0 0 150px;
+      }
+    }
+
+    &__field input {
+      flex: 1;
+
+      @media (min-width: 600px) {
+        flex: 0 0 300px;
+      }
+    }
+
+    &__field--invalid input {
+      border-color: #855;
+      background-color: #fbb;
+    }
+  }
+}

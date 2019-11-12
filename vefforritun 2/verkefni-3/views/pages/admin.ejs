@@ -1,0 +1,48 @@
+<%- include('../partials/header', {title: 'Stjórnborð', path: locals.urls.admin}) %>
+
+<div class="container-fluid">
+  <div class="col-12">
+
+    <h1 class="col-12">Notendur</h1>
+
+    <form action="<%= locals.urls.admin %>" method="post" class="w-100">
+      <div class="w-100 overflow-auto">
+        <table class="table" id="notendur-tafla">
+          <thead>
+            <tr>
+              <th>Stjórnandi?</th>
+              <th>Notendanafn</th>
+              <th>Nafn</th>
+              <th>Netfang</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% users.forEach(user => { %>
+            <tr>
+              <td>
+                <input type="checkbox" name="<%= user.id %>" <%=(user.admin) ? 'checked' : '' %>
+                <%= (user.id === locals.user.id) ? 'disabled' : '' %> >
+              </td>
+              <td>
+                <%= user.notendanafn %>
+              </td>
+              <td>
+                <%= user.nafn %>
+              </td>
+              <td>
+                <%= user.netfang %>
+              </td>
+            </tr>
+            <% }); %>
+          </tbody>
+
+        </table>
+      </div>
+      <input type="submit" name="submitAdminChanges" value="Uppfæra stjórnendur" class="btn btn-outline-primary col-8 col-md-4 mt-3 takkar">
+
+    </form>
+
+  </div>
+</div>
+
+<% include ../partials/footer %>

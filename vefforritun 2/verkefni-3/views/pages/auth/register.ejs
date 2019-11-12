@@ -1,0 +1,44 @@
+<%- include('../../partials/header', {title: 'Nýskráning', path: locals.urls.register}) %>
+
+<div class="container-fluid p-2">
+  <div class="col-8 m-auto">
+
+    <h1 class="col-12 pl-0 border-bottom">Nýskráning</h1>
+
+    <form action="<%= locals.urls.register %>" method="post" id="form-register" class="col-12 p-0 pt-4 d-flex flex-column">
+      <div class="field-container flex-column flex-md-row">
+        <label class="col-12 p-0 col-md-3" for="nafn">Nafn:</label>
+        <input class="<%= "col-12 p-0 col-md-9 " + invalid.nafn %>" type="text" name="nafn" value="<%= data.nafn %>">
+      </div>
+      <div class="field-container flex-column flex-md-row">
+        <label class="col-12 p-0 col-md-3" for="Netfang">Netfang:</label>
+        <input class="<%= "col-12 p-0 col-md-9 " + invalid.netfang %>" type="email" name="netfang" value="<%= data.netfang %>">
+      </div>
+      <div class="field-container flex-column flex-md-row">
+        <label class="col-12 p-0 col-md-3" for="notendanafn">Notendanafn:</label>
+        <input class="<%= "col-12 p-0 col-md-9 " + invalid.notendanafn %>" type="text" name="notendanafn" value="<%= data.notendanafn %>">
+      </div>
+      <div class="field-container flex-column flex-md-row">
+        <label class="col-12 p-0 col-md-3" for="lykilord">Lykilorð:</label>
+        <input class="<%= "col-12 p-0 col-md-9 " + invalid.lykilord %>" type="password" name="lykilord">
+      </div>
+      <div class="field-container flex-column flex-md-row">
+        <label class="col-12 p-0 col-md-3" for="lykilord_stadfesta">Staðfesta lykilorð:</label>
+        <input class="<%= "col-12 p-0 col-md-9 " + invalid.lykilord_stadfesta %>" type="password" name="lykilord_stadfesta">
+      </div>
+      <input class="col-8 col-md-4 mt-4 btn btn-outline-primary" type="submit" value="Stofna aðgang">
+    </form>
+
+    <% if (typeof errors != 'undefined') { %>
+      <h4 class="col-12 pl-0 mt-3">Villur:</h4>
+      <ul>
+        <% errors.forEach((err) => { %>
+          <li><%= err.msg %></li>
+        <% }); %>
+      </ul>
+    <% } %>
+
+  </div>
+</div>
+
+<% include ../../partials/footer %>

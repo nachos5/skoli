@@ -1,0 +1,54 @@
+@import "~bootstrap/scss/bootstrap.scss";
+
+.kassi {
+  color: black;
+  height: 300px;
+
+  &:hover {
+    color: black;
+  }
+
+  &__grar {
+    background-color: $gray-500;
+  }
+
+  &__graenn {
+    background-color: rgba($green, .6);
+  }
+
+  &__innri1 {
+    height: 60%;
+
+    img {
+      object-fit: cover;
+      object-position: 0 0;
+    }
+  }
+
+  &__innri2 {
+    height: 20%;
+    padding: 5px 10px;
+
+    p {
+      display: flex;
+      align-items: center;
+      margin: 0;
+      //overflow: scroll;
+      text-overflow: ellipsis;
+
+      &:first-child {
+        height: 20%;
+      }
+
+      &:last-child {
+        font-size: 1rem;
+        font-weight: bold;
+        height: 80%;
+      }
+    }
+  }
+
+  &__innri3 {
+    height: 20%;
+  }
+}

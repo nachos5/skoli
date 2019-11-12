@@ -1,0 +1,20 @@
+#logout-button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+header {
+  nav {
+
+    a,
+    input {
+      color: $gray;
+
+      &:hover {
+        color: black;
+      }
+
+    }
+  }
+}

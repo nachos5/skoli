@@ -1,0 +1,97 @@
+@import '../../config.scss';
+
+.order {
+
+  h2 {
+    margin-bottom: $gutter;
+  }
+  
+  &__info {
+    width: 100%;
+    margin: $gutter 0 $gutter 0;
+
+    * {
+      margin: 0;
+    }
+
+    &--item {
+      display: grid;
+      grid-template-columns: 50% auto;
+    }
+
+    &--item :first-child {
+      font-weight: $font-bold;
+    }
+
+    @media (min-width: $min-width) {
+      width: 60%;
+    }
+  }
+
+  &--link, &--link:link, &--link:active, &--link:visited, &--link:hover {
+    text-decoration: none;
+    color: $color-font;
+  }
+
+  &__table {
+    width: 100%;
+    margin: $gutter 0 $gutter 0;
+    
+    tr:nth-of-type(even) { 
+      background: $color-background;
+    }
+    
+    thead {
+      background: $color-font;
+      color: $color-background;
+      font-weight: bold; 
+    }
+
+    tr:hover {
+      background: $color-font;
+      color: $color-background;
+    }
+    
+    td, th { 
+      padding: 6px; 
+    }
+
+    &--total {
+      font-weight: $font-bold;
+    }
+    
+    @media (max-width: $min-width) {
+      
+      // Hide table head
+      thead {
+        display: none;
+      }
+      
+      // Table rows display as columns
+      tr { 
+        display: flex;
+        flex-direction: column;
+      }
+
+      // Table columns display as a grid of 1x2
+      td {
+        display: grid;
+        grid-template-columns: 50% auto;
+        border-bottom: 1px solid #eee; 
+      }
+      
+      // Set headers
+      td:nth-of-type(1):before { content: 'Vara'; }
+      td:nth-of-type(2):before { content: 'Verð'; }
+      td:nth-of-type(3):before { content: 'Fjöldi'; }
+      td:nth-of-type(4):before { content: 'Samtals'; }
+
+      // Special case for total price
+      tbody > :last-child > td:nth-of-type(1) { display: none }
+      tbody > :last-child > td:nth-of-type(2) { display: none }
+      tbody > :last-child > td:nth-of-type(3) { display: none }
+
+      tbody > :last-child > td:nth-of-type(4):before { content: '' }
+    } 
+  }
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <% include ../partials/head %>
+  </head>
+  <body>
+    <header>
+        <%- include('../partials/header',
+            {titill: 'Fyrirlestrar', flokkur: 'Vefforritun'}) %>
+    </header>
+
+    <main class="container">
+
+      <%- include('../partials/filters',
+          {category: category}) %>
+
+
+      <% if (typeof json != 'undefined') { %>
+        <div class="row d-flex">
+          <% json.lectures.forEach(function(lecture){ %>
+
+            <a href=<%= lecture.category + "/" + lecture.slug %> class="col-6 col-lg-4 col-xl-3 d-flex flex-column kassi">
+
+              <div class="w-100 kassi__innri1">
+                <% if (lecture.thumbnail) { %>
+                  <img src="<%= lecture.thumbnail %>" class="w-100 h-100" />
+                <% } %>
+              </div>
+
+              <div class="w-100 kassi__innri2">
+                <p><%= lecture.category %></p>
+                <p><%= lecture.title %></p>
+              </div>
+
+              <div class="w-100 kassi__innri3"></div>
+
+            </a>
+
+          <% }); %>
+        </div>
+      <% } %>
+    </main>
+
+    <footer>
+        <% include ../partials/footer %>
+    </footer>
+
+  </body>
+</html>

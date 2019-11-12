@@ -1,0 +1,38 @@
+<% include ../partials/header %>
+
+<div class="container-fluid">
+  <div class="col-12">
+
+    <h1 class="col-12 text-center border-bottom">Atvinnuumsóknir</h1>
+
+    <div id="app-listi" class="col-12">
+      <% allApps.forEach(app => { %>
+        <div class="col-12 app-con border-bottom">
+          <h3><%= app.nafn %></h3>
+          <a href="<%= "mailto:" + app.netfang %>"><%= app.netfang %></a>
+          <p>Sími: <%= app.sími %></p>
+          <p>Umsókn send: <%= app.dagsetning.toLocaleString() %></p>
+          <p>Starf: <%= app.starf %></p>
+          <p>Kynning: <%= app.texti %></p>
+
+          <form action="<%= "/applications/" + app.id %>" method="post" id="form-unnin" class="col-12 mt-4 mb-4 d-flex">
+            <% if (!app.unnin) { %>
+              <%# notum þennan input field til að geyma id-ið á umsókninni %>
+              <input type="submit" name="updateButton" value="Vinna umsókn"
+                     class="btn btn-outline-primary col-5 col-md-4 takkar">
+              <div class="col-2 col-md-4"></div>
+            <% } else { %>
+              <p class="col-8">Umsókn unnin: <%= app.unnin_dagsetning.toLocaleString() %></p>
+            <% } %>
+              <input type="submit" name="deleteButton" value="Eyða umsókn"
+                     class="btn btn-outline-primary col-5 col-md-4 takkar">
+          </form>
+
+        </div>
+      <% }); %>
+    </div>
+
+  </div>
+</div>
+
+<% include ../partials/footer %>

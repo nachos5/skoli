@@ -1,0 +1,14 @@
+// container fyrir allar umsóknirnar
+#app-listi {
+  // container fyrir hverja umsókn
+  .app-con {
+    p {
+      overflow-wrap: break-word;
+      margin: 0.5rem 0;
+    }
+  }
+
+  .takkar {
+    white-space: normal;
+  }
+}

@@ -1,0 +1,18 @@
+<div class="container-fluid w-100 h-100 p-0">
+  <% if (typeof mynd != 'undefined') { %>
+    <div class="w-100 h-100"
+         id="bg-image"
+         style=<%= 'background-image:url("/' + mynd + '")'%>></div>
+  <% } else { %>
+    <div class="w-100 h-100"
+         id="bg-image"
+         style=<%= 'background-image:url("/img/header.jpg")'%>></div>
+  <% } %>
+  <% if (typeof titill != 'undefined') { %>
+      <div class="w-100 d-flex flex-column justify-content-center align-items-center"
+           id="fyrirsogn">
+        <h3> <%= flokkur %> </h3>
+        <h1> <%= titill %> </h1>
+      </div>
+  <% } %>
+</div>

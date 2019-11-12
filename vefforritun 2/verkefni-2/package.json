@@ -1,0 +1,33 @@
+{
+  "name": "v2",
+  "version": "1.0.0",
+  "description": "Verkefni 2",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app/app.js",
+    "dev": "nodemon app/app.js",
+    "setup": "node db/setup.js",
+    "eslint": "eslint app/*.js db/*.js",
+    "test": "npm run eslint",
+    "scss": "node-sass -w scss/styles.scss -o public"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.2.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-validator": "^5.3.1",
+    "pg": "^7.8.0",
+    "xss": "^1.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^5.12.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.15.0",
+    "node-sass": "^4.11.0",
+    "nodemon": "^1.18.9"
+  }
+}

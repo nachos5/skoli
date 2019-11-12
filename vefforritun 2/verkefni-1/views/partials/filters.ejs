@@ -1,0 +1,32 @@
+<div id="filters" class="row d-flex m-3 justify-content-center align-items-center">
+  <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+      <% if (category === '') { %>
+        <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="/" role="tab" aria-controls="pills-heim" aria-selected="true">heim</a>
+      <% } else { %>
+        <a class="nav-link" id="pills-home-tab" data-toggle="pill" href="/" role="tab" aria-controls="pills-heim" aria-selected="false">heim</a>
+      <% } %>
+    </li>
+    <li class="nav-item">
+      <% if (category === 'html') { %>
+        <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="/html" role="tab" aria-controls="pills-html" aria-selected="true">html</a>
+      <% } else { %>
+        <a class="nav-link" id="pills-home-tab" data-toggle="pill" href="/html" role="tab" aria-controls="pills-html" aria-selected="false">html</a>
+      <% } %>
+    </li>
+    <li class="nav-item">
+      <% if (category === 'css') { %>
+        <a class="nav-link active" id="pills-profile-tab" data-toggle="pill" href="/css" role="tab" aria-controls="pills-css" aria-selected="true">css</a>
+      <% } else { %>
+        <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="/css" role="tab" aria-controls="pills-css" aria-selected="false">css</a>
+      <% } %>
+    </li>
+    <li class="nav-item">
+      <% if (category === 'javascript') { %>
+        <a class="nav-link active" id="pills-contact-tab" data-toggle="pill" href="/javascript" role="tab" aria-controls="pills-js" aria-selected="true">js</a>
+      <% } else { %>
+        <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="/javascript" role="tab" aria-controls="pills-js" aria-selected="false">js</a>
+      <% } %>
+    </li>
+  </ul>
+</div>

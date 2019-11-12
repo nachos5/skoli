@@ -1,0 +1,36 @@
+<%- include('../../partials/header', {title: 'Innskrá', path: locals.urls.login}) %>
+
+<div class="container-fluid p-2">
+  <div class="col-8 m-auto">
+
+    <h1 class="col-12 pl-0 border-bottom">Innskrá</h1>
+
+    <form action="<%= locals.urls.login %>" method="post" id="form-login" class="col-12 p-0 pt-4 d-flex flex-column">
+      <div class="field-container flex-column flex-md-row">
+        <label class="col-12 p-0 col-md-3" for="username">Notendanafn:</label>
+        <input class="<%= "col-12 p-0 col-md-9 " + invalid.username %>" type="text" name="username" value="<%= data.username %>">
+      </div>
+      <div class="field-container flex-column flex-md-row">
+        <label class="col-12 p-0 col-md-3" for="password">Lykilorð:</label>
+        <input class="<%= "col-12 p-0 col-md-9 " + invalid.password %>" type="password" name="password">
+      </div>
+      <input class="col-8 col-md-4 mt-4 btn btn-outline-primary" type="submit" value="Innskrá">
+    </form>
+
+    <% if (typeof errors != 'undefined') { %>
+      <h4 class="col-12 pl-0 mt-3">Villur:</h4>
+      <ul>
+        <% errors.forEach((err) => { %>
+          <li><%= err.msg %></li>
+        <% }); %>
+      </ul>
+    <% } %>
+
+    <p>
+      <%- message %>
+    </p>
+
+  </div>
+</div>
+
+<% include ../../partials/footer %>

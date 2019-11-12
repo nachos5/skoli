@@ -1,0 +1,83 @@
+@import '../../config.scss';
+@import 'bootstrap/scss/bootstrap-grid.scss';
+
+.header {  
+  background-color: $color-font;
+  padding: $gutter;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  &__title {
+    font-family: $font-heading;
+    font-size: 2rem;
+    margin: auto;
+
+    a {
+      color: $color-background;
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+  }
+  
+  &__titleLink {
+    text-decoration: none;
+    color: $color-background;
+  }
+
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    @include media-breakpoint-down(md) {
+      font-size: 0.8rem;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    text-align: left;
+    color: $color-background;
+
+    &:hover {
+      color: white;
+      text-decoration: none;
+      svg {
+        color: $color-lime;
+      }
+    }
+    
+    @include media-breakpoint-down(sm) {
+      text-align: center;
+    }
+
+    &__container {
+      padding: 5px 0;
+      display: flex;
+      justify-content: flex-start;
+
+      @include media-breakpoint-down(sm) {
+        justify-content: center;
+      }
+    }
+
+  }
+
+  &__link--selected {
+    font-weight: 700;
+    svg {
+      color: $color-teal;
+    }
+  }
+}
+
+.icons {
+  color: $color-gray;
+}

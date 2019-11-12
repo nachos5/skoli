@@ -1,0 +1,58 @@
+@import '../../config.scss';
+
+.orders {
+
+  h2 {
+    margin-bottom: $gutter;
+  }
+  
+  &__table {
+    width: 100%;
+    
+    tr:nth-of-type(even) { 
+      background: $color-background; 
+    }
+    
+    thead {
+      background: $color-font;
+      color: $color-background;
+      font-weight: bold; 
+    }
+    
+    tr:hover {
+      background: $color-font;
+      color: $color-background;
+    }
+
+    td, th { 
+      padding: 6px; 
+    }
+    
+    @media (max-width: $min-width) {
+      
+      // Hide table head
+      thead {
+        display: none;
+      }
+      
+      // Table rows display as columns
+      tr { 
+        display: flex;
+        flex-direction: column;
+      }
+
+      // Table columns display as a grid of 1x2
+      td {
+        display: grid;
+        grid-template-columns: 50% auto;
+        border-bottom: 1px solid #eee; 
+      }
+      
+      // Set headers
+      td:nth-of-type(1):before { content: 'Pöntun'; }
+      td:nth-of-type(2):before { content: 'Nafn'; }
+      td:nth-of-type(3):before { content: 'Heimilisfang'; }
+      td:nth-of-type(4):before { content: 'Búin til'; }
+    } 
+  }
+}

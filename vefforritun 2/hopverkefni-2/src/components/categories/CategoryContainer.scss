@@ -1,0 +1,29 @@
+@import '../../config.scss';
+
+.category-container {
+  &-outer {
+    padding: 1rem;
+  }
+  &-inner {
+    display: block;
+    border: 1px black solid;
+    color: $color-font;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    &:hover {
+      background-color: $color-gray;
+      color: $color-font;
+      cursor: pointer;
+      .category-title {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.category-title {
+  font-family: $font-heading;
+  font-size: 2rem;
+  text-align: center;
+  margin: 0 2rem;
+}
