@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Breakout</title>
+  </head>
+  <body cz-shortcut-listen="true" class="vsc-initialized">
+    <canvas id="myCanvas" width="1000" height="800" style="border: 1px solid black;
+     position: absolute; top: 0; left: 0">
+  	Sorry, but your browser does not support the HTML5 canvas tag.
+  	</canvas>
+    <div style="padding:100px 0 0 1200px">
+      <ul>
+        <p><strong>Keys:</strong></p>
+        <li>A and D for left and right movement.</li>
+        <li>Spacebar for <span style="color: red;">SUPERBOOST</span>, careful though,
+            it will reduce your paddle width!</li>
+        <ul>
+          <p>Utils:</p>
+          <li>P for pause.</li>
+          <li>O for single-step.</li>
+          <li>Q for quitting.</li>
+        </ul>
+      </ul>
+      <div style="height: 10px;"></div>
+      <ul>
+        <p><strong>Cool stuff:</strong></p>
+        <li>Superboost by clicking spacebar, paddle shrinks while doing so.</li>
+        <li>Invulnerability after ball spawn, indicated by the ball flickering, which lasts </br>
+            until the ball collides with the floor or the paddle.</li>
+        <li>Sound. No pesky audiofiles. Using web audio API to generate simple oscillators.
+            Added some randomness (only to the bricks though) to make it a bit more dynamic.</li>
+        <li>Score system, keeps track of the all time high score (with local storage),</br>
+            current session high score and finally the current stage.</li>
+        <li>Lifes. There are 3 lifes each stage, indicated by the heart sprites.</li>
+        <li>Moving and shrinking the canvas.</li>
+        <li>Difficulty. Each stage you progress, the game gets harder by increasing the speed. Of everything.</br>
+            Also the ball gets gradually faster the longer it has been in play (since reset).</li>
+        <li>Bricks constantly changing to a new random color. Very cool.</li>
+      </ul>
+      <div style="height: 10px;"></div>
+      <ul>
+        <p><strong>Not so cool:</strong></p>
+        <li>'C' (clear-toggle) can't work in my game as the canvas clears itself when it resizes.</li>
+        <li>Collisions. Tried working on them and they are decent, but definitely buggy sometimes.</li>
+      </ul>
+    <div>
+
+    <div id="output"></div>
+
+    <script src="core.js"></script>
+    <script src="utils.js"></script>
+    <script src="g_keys.js"></script>
+    <script src="g_canvas.js"></script>
+    <script src="Sprite.js"></script>
+    <script src="Paddle.js"></script>
+    <script src="g_ball.js"></script>
+    <script src="Brick.js"></script>
+    <script src="sound.js"></script>
+    <script src="g_main.js"></script>
+    <script src="update.js"></script>
+    <script src="render.js"></script>
+    <script src="breakout.js"></script>
+  </body>
+</html>
