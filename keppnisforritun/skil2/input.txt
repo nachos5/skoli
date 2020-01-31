@@ -1,0 +1,43 @@
+6
+6
+E E
+E N
+N E
+E N
+N E
+E N
+6
+E E
+E E
+E E
+E E
+E E
+E N
+6
+E E
+E E
+E E
+E E
+E E
+N E
+6
+N E
+N N
+N N
+N N
+N N
+E N
+6
+E N
+E E
+E E
+E E
+E E
+N E
+6
+E N
+E E
+E E
+E E
+E E
+N N
