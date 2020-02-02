@@ -92,6 +92,7 @@ function update() {
 
 function render() {
   console.info('rendering...');
+  // console.info(points);
   gl.clear(gl.COLOR_BUFFER_BIT);
   gl.drawArrays(gl.POINTS, 0, points.length);
 }

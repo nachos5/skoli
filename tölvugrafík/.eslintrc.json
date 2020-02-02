@@ -13,7 +13,9 @@
         "sourceType": "module"
     },
     "rules": {
+        "consistent-return": "off",
         "no-console": "off",
+        "no-else-return": "off",
         "no-plusplus": "off",
         "no-undef": "off",
         "no-use-before-define": "off",
